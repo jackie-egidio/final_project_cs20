@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+	<title>Word Generator</title>
+	<meta charset="utf-8"/>
+	<script>
+	const randomWord = () => {
+	fetch('https://random-word-api.herokuapp.com/word?number=1')
+	.then(response => {
+			return response.json();
+	})
+	.then(response => {
+			document.getElementById("data").innerHTML = response;
+			randomDefinition(document.getElementById("data").innerHTML);
+	})
+	.catch(err => {
+			console.log(err);
+			return "No Word Available"
+	});
+}
+
+const randomDefinition = (word) => {
+	string = "`https://api.dictionaryapi.dev/api/v2/entries/en/" + word + "`";
+	fetch(string)
+	.then(response => {
+			return response.json();
+	})
+	.then(response => {
+			console.log(response[0].definitions[0]);
+			document.getElementById("def").innerHTML = "Definition: " + response[0].definitions[0];
+	})
+	.catch(err => {
+		document.getElementById("def").innerHTML = "No definition";
+		//document.querySelector(".d-flex").appendChild(definition);
+		//console.log(err);
+	})
+
+}
+
+  </script>
+  
+</head>
+
+<body>
+  <h1>Author Info Using Get</h1>
+  <div id="data"></div>
+	<div id="def"></div>
+  <input type="button" name="button1" value="Get" onclick = "randomWord()"
+  id="button1">
+  
+</body>
+
+</html>
