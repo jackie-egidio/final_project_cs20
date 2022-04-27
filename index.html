@@ -1,46 +1,228 @@
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Nabbar</title>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+        <title>Diary</title>
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+				font-family: sans-serif;
+            }
 
-    <!-- LINKING STYLE SHEET FILE -->
-    <link rel="stylesheet" href="style.css">
+			@keyframes fadeInAnimation {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 0.5;
+				}
+			}
 
-    <!-- LINKING JAVASCRIPT FILE -->
-</head>
-<body>
-    <nav class="navbar">
-        <div class="brand-title">
-            <img style="height: 60px" src="logo.png"></img>
+            .head {
+                background-color: #DCD0EA;
+            }
+
+            .head-content {
+                padding: 16px;
+            }
+
+            .head-text {
+                font-family: cursive;
+                color: white;
+                font-size: 30px;
+                text-align: center; 
+                padding: 15px;
+            }
+
+            .banner-content {
+                height: 400px;
+                overflow: hidden;
+            }
+
+            .banner-img img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                opacity: 0.5;
+				animation: fadeInAnimation ease 3s;
+				animation-iteration-count: 1;
+				animation-fill-mode: forwards;
+            }
+
+            .banner-content button {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                background-color: #7D3C98;
+                color: white;
+                font-size: 24px;
+                padding: 12px 24px;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+            }
+			
+			.banner-content h1 {
+				position: absolute;
+                top: 50%;
+                left: 50%;
+				transform: translate(-50%, -450%);
+				color: white;
+                font-size: 42px;
+			}
+
+            .banner-content button:hover {
+                background-color: #DCD0EA;
+            }
+
+            .banner-login {
+                transform: translate(-150%, -200%);
+            }
+
+            .banner-signup {
+                transform: translate(50%, -200%);
+            }
+
+			.about-container {
+				padding: 100px;
+			}
+
+			.about-text {
+				width: 50%;
+				margin: auto;
+				line-height: 2;
+			}
+
+			.about-text h1 {
+				text-align: center;
+				font-size: 36px;
+				color: #7D3C98;
+			}
+
+			.about-text p {
+				font-size: 24px;
+				color: #7D3C98;
+				text-align: justify;
+			}
+
+			.about-features {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-evenly;
+				padding: 50px;
+			}
+
+			.about-single-feat {
+				order: 3;
+				padding: 40px;
+				border-radius: 5px;
+				background-color: #F2BFD7;
+				color: white;
+				font-size: 24px;
+			}
+
+			.footer, .nav {
+				padding: 2px;
+			}
+
+			.nav a:hover {
+				color: #F2BFD7;
+			}
+
+			.nav {
+				background-color: #7D3C98;
+			}
+
+			.footer {
+				background-color: #DCD0EA;
+			}
+
+			.footer li, .nav li {
+				display: inline;
+			}
+
+			.footer a, .nav a {
+				padding-right: 30px;
+				text-decoration: none;
+			}
+
+			.footer a {
+				color: #7D3C98;
+			}
+
+			.nav a {
+				color: white;
+			}
+        </style>
+    </head>
+    <body>
+        <div class="head">
+            <div class="head-content">
+                <div class="head-text">
+                    <strong>Personal Diary App</strong>
+                </div>
+            </div>
         </div>
-
-        <a href="#" class="toggle-button">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </a>
-
-        <div class = "header">
-        <div class="navbar-links">
-            <ul id="nav">
-           <li><a style = "font-size: 18px" href="#">About</a><li>
-           <li><a style = "font-size: 18px" href="#">FAQs</a><li>
-           <li class="book"><a style = "font-size: 18px" href="booking.html">Get Started</a></li>
-       </ul>
+		<div class="nav">
+			<ul>
+				<li><a href="https://jacquelinee.sgedu.site/final_project/index.html">Home</a></li>
+				<li><a href="https://jacquelinee.sgedu.site/final_project/contactus.html">Contact Us</a></li>
+				<li><a href="https://jacquelinee.sgedu.site/final_project/diaryform.html">Diary</a>
+				<li style="float: right"><a href="https://jacquelinee.sgedu.site/final_project/signup.html">Signup</a></li>
+				<li style="float: right"><a href="https://jacquelinee.sgedu.site/final_project/login.html">Login</a></li>
+			</ul>
+		</div>
+        <div class="banner">
+            <div class="banner-content">
+                <div class="banner-img">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Timeless_Books.jpg">
+					<h1>Create Your Online Diary Today!</h1>
+                    <button class="banner-login" onclick="location.href = 'https://jacquelinee.sgedu.site/final_project/login.html';" type="button">
+                        Log In
+                    </button>
+                    <button class="banner-signup" onclick="location.href = 'https://jacquelinee.sgedu.site/final_project/signup.html';" type="button">
+                        Sign Up
+                    </button>
+                </div>
+            </div>
         </div>
-        </div>
-    </nav>
-    <div style="text-align: center;">
-          <img class="banner" src="diary2.jpg">
-          <h1 class="bannerText">Your private, free diary</h1>
-          <h1 style="font-size: 25px; color: white; font-weight: lighter; position: absolute; top: 45%; left: 5%"> Start now and journal your thoughts everyday! </h1>
-          <div style="height: 400px; width: 300px;position: absolute; top: 20%; right: 10%; background-color: white"></div>
-          <div class="form">
-      </div><!-- tab-content -->
-
-</div> <!-- /form -->
-</body>
+		<div class="about-container">
+			<div class="about-content">
+				<div class="about-text">
+					<h1>Features</h1>
+					<p>
+						Our website provides a unique daily cataloguing experience. The days of losing precious information 
+						in lost or damaged notebooks are over. Now, My Diary provides a secure place to store all your 
+						journaling needs. Our secure database can't be stolen by a family member like a physical notebook.
+						Instead, we provide the most up-to-date encryption to ensure your secrets are safe. Some of our 
+						other unique features are listed below.
+					</p>
+				</div>
+				<br />
+				<br />
+				<div class="about-features">
+					<div class="about-single-feat">
+						Personalized Account
+					</div>
+					<div class="about-single-feat">
+						Write Online
+					</div>
+					<div class="about-single-feat">
+						Database Storing
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<ul>
+				<li><a href="https://jacquelinee.sgedu.site/final_project/index.html">Home</a></li>
+				<li><a href="https://jacquelinee.sgedu.site/final_project/contactus.html">Contact Us</a></li>
+				<li><a href="https://jacquelinee.sgedu.site/final_project/signup.html">Signup</a></li>
+				<li><a href="https://jacquelinee.sgedu.site/final_project/login.html">Login</a></li>
+			</ul>
+		</div>
+    </body>
 </html>
