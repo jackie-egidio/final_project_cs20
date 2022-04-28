@@ -178,3 +178,32 @@ html, body {
 	background-color: #AA336A;
 	color: #F6EDEE;
 }
+#red {
+  background-color: white;
+  color: #7d3b98;
+  border: solid 1px  #7d3b98;
+  padding: 40px;
+  font-size: 23px;
+  font-weight: 900;
+}
+
+#green {
+  background-color: black;
+  color: #66ff00;
+  border: solid 1px  #66ff00;
+  padding: 40px;
+  font-family: courier;
+  font-size: 23px;
+  font-weight: 900;
+}
+
+
+#blue {
+  background-color:  #f2eecb;
+  color: #654321;
+  border: solid 1px  #654321;
+  padding: 40px;
+  font-family: georgia;
+  font-size: 22px;
+  font-weight: 900;
+}
