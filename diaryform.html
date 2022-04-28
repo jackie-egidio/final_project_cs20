@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="style.css">
 		<link rel="stylesheet" href="form_style.css">
 		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css"> -->
-		<script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js">
             async function fetchQuote() {
                 fetch('https://favqs.com/api/qotd')
                   .then(response => response.json())
@@ -95,16 +95,23 @@
 			<a href="https://jacquelinee.sgedu.site/final_project/logout.php" style="float: right">Logout</a>
 		</div>
 		<div class="form">
+			<div style="margin-top: -50px; float: right; text-align: left">
+			<button id="red" class="btn-color-change">Light</button>
+			<button id="green" class="btn-color-change">Dark</button>
+			</div>
 			<div id="results">
 				<h1>Click a button below for some inspiration!</h1>
 			</div>
+			<script src="index2.js"></script>
+			<script src="index.js"></script>
 			<div class="buttons">
 				<input type="button" name="button1" value="Get a Quote!" onclick = "getFavQ()" id="button1">
 				<input type="button" name="button2" value="Get a Word!" onclick = "randomWord()" id="button2">
 			</div>
+			<div id="a">
 			<form action="diary.php" method="post">
 				<label for="title">Title:</label><br>
-				<input type="text" name="title" /><br><br>
+				<input id = "b" type="text" name="title" /><br><br>
 				<label for="date">Date:</label><br>
 				<input type="date" id="start" name="date">
 				<script>
@@ -112,20 +119,24 @@
 				</script>
 				<br><br>
 				<label for="entry">Entry:</label><br>
-				<textarea name="description"></textarea><br><br>
-				<div style="text-align: center;">
-					<input type="submit" value="Record Entry">
+				<textarea id = "c" name="description"></textarea><br><br>
+				<div  id = "c" style="text-align: center;">
+					<input id = "c" type="submit" value="Record Entry">
 				</div>
 			</form>
 		</div>
-		<button id="red" class="btn-color-change">Theme 1</button>
-		<button id="green" class="btn-color-change">Theme 2</button>
-		<button id="blue" class="btn-color-change">Theme 3</button>
+		</div>
+
+
+
+
+
 		<div class="footer">
 			<a href="https://jacquelinee.sgedu.site/final_project/index.html">Home</a>
 			<a href="https://jacquelinee.sgedu.site/final_project/contactus.html">Contact Us</a>
 			<a href="https://jacquelinee.sgedu.site/final_project/signup.html">Signup</a>
 			<a href="https://jacquelinee.sgedu.site/final_project/login.php">Login</a>
 		</div>
+
 	</body>
 </html>
