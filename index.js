@@ -13,3 +13,4 @@ green.addEventListener('click', function onClick(event) {
   input.style.color = 'white';
   input2.style.color = 'white';
 });
+
