@@ -25,7 +25,7 @@ html, body {
 	font-family: cursive;
 	color: #7D3C98;
 	font-size: 36px;
-	text-align: left; 
+	text-align: left;
 	padding: 15px;
 }
 
@@ -182,28 +182,19 @@ html, body {
   background-color: white;
   color: #7d3b98;
   border: solid 1px  #7d3b98;
-  padding: 40px;
-  font-size: 23px;
+  padding: 10px;
+  font-size: 20px;
   font-weight: 900;
+  z-index: 2;
+   margin-left: -180px;
 }
 
 #green {
   background-color: black;
-  color: #66ff00;
-  border: solid 1px  #66ff00;
-  padding: 40px;
-  font-family: courier;
-  font-size: 23px;
+  color: white;
+  border: solid 1px  #7d3b98;
+  padding: 10px;
+  font-size: 20px;
   font-weight: 900;
-}
-
-
-#blue {
-  background-color:  #f2eecb;
-  color: #654321;
-  border: solid 1px  #654321;
-  padding: 40px;
-  font-family: georgia;
-  font-size: 22px;
-  font-weight: 900;
+  top: 180px;
 }
