@@ -13,9 +13,9 @@
 }
 
 .form form {
-	background-color: #F6EDEE;
+	/* background-color: #F6EDEE; */
 	padding: 30px;
-	border-radius: 4px;
+	border: 2px solid #7d3b98;
 }
 
 .buttons {
