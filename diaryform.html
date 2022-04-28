@@ -3,83 +3,9 @@
 	<head>
 	<meta charset="UTF-8">
 		<title>Untitled Document</title>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="form_style.css">
 		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css"> -->
-		<style>
-			html, body {
-				margin: 0;
-				padding: 0;
-				font-family: sans-serif;
-			}
-
-			.head {
-				background-color: #DCD0EA;
-			}
-
-			.head-content {
-				padding: 16px;
-			}
-
-			.head-text {
-				font-family: sans-serif;
-				color: white;
-				font-size: 30px;
-				text-align: center; 
-				padding: 20px;
-			}
-
-			.form {
-				width: 50%;
-				margin: auto;
-				padding: 100px;
-			}
-
-			.form-text {
-				font-family: sans-serif;
-				color: #7D3C98;
-				font-size: 30px;
-				text-align: center; 
-				padding: 20px;
-			}
-
-			.footer, .nav {
-				padding: 2px;
-			}
-
-			.nav a:hover {
-				color: #F2BFD7;
-			}
-
-			.nav {
-				background-color: #7D3C98;
-			}
-
-			#results {
-				color: #7D3C98;
-				font-size: 20px;
-				text-align: center;
-			}
-
-			.footer {
-				background-color: #DCD0EA;
-			}
-
-			.footer li, .nav li {
-				display: inline;
-			}
-
-			.footer a, .nav a {
-				padding-right: 30px;
-				text-decoration: none;
-			}
-
-			.footer a {
-				color: #7D3C98;
-			}
-
-			.nav a {
-				color: white;
-			}
-		</style>
 		<script>
             async function fetchQuote() {
                 fetch('https://favqs.com/api/qotd')
@@ -163,19 +89,19 @@
 				</div>
 			</div>
 		</div>
-		<div class="nav">
-			<ul>
-				<li><a href="https://jacquelinee.sgedu.site/final_project/index.html">Home</a></li>
-				<li><a href="https://jacquelinee.sgedu.site/final_project/contactus.html">Contact Us</a></li>
-				<li><a href="https://jacquelinee.sgedu.site/final_project/diaryform.html">Diary</a>
-				<li style="float: right"><a href="https://jacquelinee.sgedu.site/final_project/signup.html">Signup</a></li>
-				<li style="float: right"><a href="https://jacquelinee.sgedu.site/final_project/login.html">Login</a></li>
-			</ul>
+		<div class="nav" id="nav">
+			<a href="https://jacquelinee.sgedu.site/final_project/index.html">Home</a>
+			<a href="https://jacquelinee.sgedu.site/final_project/contactus.html">Contact Us</a>
+			<a href="https://jacquelinee.sgedu.site/final_project/logout.php" style="float: right">Logout</a>
 		</div>
 		<div class="form">
-			<div id="results">Click a button below for some inspiration!</div>
-			<input type="button" name="button1" value="Get" onclick = "getFavQ()" id="button1">
-			<input type="button" name="button2" value="Get" onclick = "randomWord()" id="button2">
+			<div id="results">
+				<h1>Click a button below for some inspiration!</h1>
+			</div>
+			<div class="buttons">
+				<input type="button" name="button1" value="Get a Quote!" onclick = "getFavQ()" id="button1">
+				<input type="button" name="button2" value="Get a Word!" onclick = "randomWord()" id="button2">
+			</div>
 			<form action="diary.php" method="post">
 				<label for="title">Title:</label><br>
 				<input type="text" name="title" /><br><br>
@@ -186,18 +112,17 @@
 				</script>
 				<br><br>
 				<label for="entry">Entry:</label><br>
-				<textarea rows = "5" cols = "60" name="description">
-				</textarea><br><br>
-				<input type="submit" value="Record Entry">
+				<textarea name="description"></textarea><br><br>
+				<div style="text-align: center;">
+					<input type="submit" value="Record Entry">
+				</div>
 			</form>
 		</div>
 		<div class="footer">
-			<ul>
-				<li><a href="https://jacquelinee.sgedu.site/final_project/index.html">Home</a></li>
-				<li><a href="https://jacquelinee.sgedu.site/final_project/contactus.html">Contact Us</a></li>
-				<li><a href="https://jacquelinee.sgedu.site/final_project/signup.html">Signup</a></li>
-				<li><a href="https://jacquelinee.sgedu.site/final_project/login.html">Login</a></li>
-			</ul>
+			<a href="https://jacquelinee.sgedu.site/final_project/index.html">Home</a>
+			<a href="https://jacquelinee.sgedu.site/final_project/contactus.html">Contact Us</a>
+			<a href="https://jacquelinee.sgedu.site/final_project/signup.html">Signup</a>
+			<a href="https://jacquelinee.sgedu.site/final_project/login.php">Login</a>
 		</div>
 	</body>
 </html>
